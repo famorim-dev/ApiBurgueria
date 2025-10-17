@@ -1,7 +1,6 @@
 package com.example.demo.domain.usuarios;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -19,6 +18,8 @@ import java.util.List;
 @EqualsAndHashCode(of = "id")
 
 public class AcessosUsuarios implements UserDetails {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
     private String loggin;
     private String senha;
