@@ -25,6 +25,12 @@ public class AcessosUsuarios implements UserDetails {
     private String senha;
     private UserRole roles;
 
+    public AcessosUsuarios(String loggin, String senha, UserRole role) {
+        this.loggin = loggin;
+        this.senha = senha;
+        this.roles = role;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         if (this.roles == UserRole.ADMIN) return List.of(new SimpleGrantedAuthority("ROLE_ADMIN"), new SimpleGrantedAuthority("ROLE_USER"));
