@@ -1,4 +1,4 @@
-package com.example.demo.domain.Usuarios;
+package com.example.demo.domain.usuarios;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

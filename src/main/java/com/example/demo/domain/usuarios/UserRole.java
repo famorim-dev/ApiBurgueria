@@ -1,4 +1,4 @@
-package com.example.demo.domain.Usuarios;
+package com.example.demo.domain.usuarios;
 
 public enum UserRole {
     ADMIN("admin"),
